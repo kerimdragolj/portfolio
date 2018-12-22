@@ -1,0 +1,168 @@
+@import 'variables',
+'mixins';
+.wrapper {
+    background-color: black;
+    color: $lightblue;
+    min-height: 100%;
+    padding-top: 0;
+    height: auto;
+    display: flex;
+    .text-wrapper {
+        position: relative;
+        width: 50%;
+        background-color: black;
+        border: 4px solid black;
+        height: 100vh;
+        z-index: 2;
+        padding-left: 4%;
+        padding-top: calc((100vh - 520px) / 2);
+        padding-bottom: calc((100vh - 520px) / 2);
+        transition: 1s;
+        .paragraph {
+            margin-bottom: 1.5rem;
+            font-size: 17px;
+            line-height: 28px;
+            width: 115%;
+            transition: 1s;
+        }
+        #headline {
+            font-size: 35px;
+        }
+        #text11,
+        #text12 {
+            font-style: italic;
+            color: $darker-lightblue
+        }
+    }
+    .right-side {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        margin-left: 2%;
+        padding-left: 1%;
+        background: #e4e4e4;
+        .col {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 190px;
+            opacity: 0.3;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition-timing-function: ease-out;
+            transition: 1s;
+            &:hover {
+                opacity: 1;
+                border-color: $lightblue;
+                transition-timing-function: ease-in;
+                transition: 1s;
+            }
+        }
+        .img1 {
+            background-image: url("../../../assets/images/gallery/image1.jpg");
+        }
+        .img2 {
+            background-image: url("../../../assets/images/gallery/image2.jpg");
+        }
+        .img3 {
+            background-image: url("../../../assets/images/gallery/image3.jpg");
+        }
+        .img4 {
+            background-image: url("../../../assets/images/gallery/image4.jpg");
+        }
+        .img5 {
+            background-image: url("../../../assets/images/gallery/image5.jpg");
+        }
+        .img6 {
+            background-image: url("../../../assets/images/gallery/image6.jpg");
+        }
+        .img7 {
+            background-image: url("../../../assets/images/gallery/image7.jpg");
+        }
+        .img8 {
+            background-image: url("../../../assets/images/gallery/image8.jpg");
+        }
+        .img9 {
+            background-image: url("../../../assets/images/gallery/image9.jpg");
+        }
+    }
+    .triangle {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 50vh 0 50vh 250px;
+        border-color: transparent transparent transparent black;
+        position: relative;
+        top: 0vh;
+        z-index: 1;
+    }
+    .toggle {
+        width: 10% !important;
+        color: black;
+        overflow: hidden;
+        padding-top: 0;
+        transition: .8s;
+        .paragraph {
+            width: 0%;
+            transition: width 1s;
+        }
+    }
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: 0.2s;
+    .close {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        color: #f1f1f1;
+        font-size: 60px;
+        font-weight: bold;
+        transition: 0.3s;
+        &:hover,
+        &:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+    img {
+        margin: auto;
+        max-height: 100vh;
+        max-width: 100vw;
+    }
+}
+
+.show {
+    transform: scale(1);
+    transition: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}

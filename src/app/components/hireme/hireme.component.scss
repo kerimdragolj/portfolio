@@ -1,0 +1,102 @@
+@import 'variables',
+'mixins';
+.form-wrapper {
+    position: absolute;
+    width: 700px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    z-index: 20;
+    overflow: hidden;
+    background: #f9f9f9;
+    border: 1px solid #cecece;
+    box-shadow: 6px 5px 15px #c0bcbc;
+    form {
+        width: 75%;
+        margin-left: 15%;
+        textarea {
+            height: 255px;
+            &::placeholder {
+                opacity: 0.4;
+            }
+        }
+        input::placeholder {
+            opacity: 0.4;
+        }
+    }
+    h3 {
+        position: relative;
+        z-index: 10;
+        top: -40px;
+        padding-left: 15%;
+    }
+    .buttons {
+        width: 100%;
+        text-align: right;
+        margin-bottom: 25px;
+    }
+}
+
+.recaptcha {
+    position: fixed;
+    top: 50%;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.recaptcha-show {
+    display: flex;
+}
+
+.show {
+    // Animation in
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: translate(-50%, -50%);
+}
+
+.hide {
+    // Animation out
+    left: 0;
+    transform: skewX(40deg) translate(-200%, -50%);
+    transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.fadeH3 {
+    position: fixed;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    color: #a7a7a7;
+    z-index: 1;
+}
+
+hr {
+    @include rotateHr( 126deg, 350px);
+    bottom: 100px;
+}
+
+#line1 {
+    position: relative;
+    left: -315px;
+    top: -15px;
+}
+
+#line2 {
+    position: relative;
+    left: -310px;
+    top: -15px;
+}
+
+#line3 {
+    right: -115px;
+}
+
+#line4 {
+    right: -85px;
+}
+
+.required {
+    color: #ff5151;
+}

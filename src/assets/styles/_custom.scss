@@ -1,0 +1,31 @@
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 100px;
+}
+
+body {
+    background-color: #E2E2E2;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: 'Electrolize', sans-serif;
+}
+
+hr {
+    height: 16px;
+    position: fixed;
+    background-color: $lightblue;
+    z-index: -1;
+}
+
+.primary-o {
+    @include button-o( $lightblue, #f0f0f0, #089cdb81 );
+}
+.primary-dark-o {
+    @include button-o( $darker-lightblue, #cceeff, #00577c );
+}
+
+.primary {
+    @include button( $lightblue, #fff, $darker-lightblue, #fff )
+}

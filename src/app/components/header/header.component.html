@@ -1,0 +1,28 @@
+<div class="header-wrapper" [ngClass]="{'black' : isBlack, 'white': !isBlack}">
+  <img src="../../../assets/images/icon-lightblue.png" class="logo">
+  <div class="button btn-first" [routerLink]="['/lets-have-fun']" [routerLinkActive]="['active']">
+    <span class="fas fa-gamepad"></span>
+    <br>
+    <i>Let's have fun!?</i>
+  </div>
+  <div class="button" [routerLink]="['/about']" [routerLinkActive]="['active']">
+    <span class="fas fa-user-tie"></span>
+    <br>
+    <i>Meet me</i>
+  </div>
+  <div class="button" [routerLink]="['/home']" [routerLinkActive]="['active']">
+    <span class="fa fa-home"></span>
+    <br>
+    <i>Home</i>
+  </div>
+  <div class="button" [routerLink]="['/skills-experience']" [routerLinkActive]="['active']">
+    <span class="fas fa-wrench"></span>
+    <br>
+    <i>Skills & work</i>
+  </div>
+  <div class="button btn-last" [routerLink]="['/hireme']" [routerLinkActive]="['active']">
+    <span class="fas fa-pen-square"></span>
+    <br>
+    <i>Hire me</i>
+  </div>
+</div>

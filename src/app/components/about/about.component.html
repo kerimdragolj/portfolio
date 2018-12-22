@@ -1,0 +1,48 @@
+<div class="wrapper">
+  <div class="text-wrapper" [ngClass]="{'toggle' : toggle}">
+    <div class="paragraph">
+      <span id="headline"></span>
+    </div>
+    <div class="paragraph">
+      <span id="text1"></span>
+      <span id="text2"></span>
+    </div>
+    <div class="paragraph">
+        <span id="text3"></span>
+        <span id="text4"></span>
+    </div>
+    <div class="paragraph">
+        <span id="text5"></span>
+        <span id="text6"></span>
+    </div>
+    <div class="paragraph">
+        <span id="text7"></span>
+        <span id="text8"></span>
+        <span id="text9"></span>
+    </div>
+    <span id="text10"></span><span id="text11"></span><span id="text12"></span>
+  </div>
+  <div class="right-side" (mouseenter)="toggle = true" (mouseleave)="toggle = false">
+    <div class="row">
+      <div class="col col-md-4 img1" (click)="currentImage = 'image1.jpg'"></div>
+      <div class="col col-md-4 img2" (click)="currentImage = 'image2.jpg'"></div>
+      <div class="col col-md-4 img3" (click)="currentImage = 'image3.jpg'"></div>
+    </div>
+    <div class="row">
+      <div class="col col-md-4 img4" (click)="currentImage = 'image4.jpg'"></div>
+      <div class="col col-md-4 img5" (click)="currentImage = 'image5.jpg'"></div>
+      <div class="col col-md-4 img6" (click)="currentImage = 'image6.jpg'"></div>
+    </div>
+    <div class="row">
+      <div class="col col-md-4 img7" (click)="currentImage = 'image7.jpg'"></div>
+      <div class="col col-md-4 img8" (click)="currentImage = 'image8.jpg'"></div>
+      <div class="col col-md-4 img9" (click)="currentImage = 'image9.jpg'"></div>
+    </div>
+  </div>
+  <div class="triangle"></div>
+</div>
+
+<div class="modal" [ngClass]="{'show' : currentImage }">
+  <span class="close" (click)="currentImage = null">&times;</span>
+  <img class="img" src="../../../assets/images/gallery/{{currentImage}}">
+</div>

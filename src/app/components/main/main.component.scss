@@ -1,0 +1,53 @@
+@import 
+    'variables',
+    'mixins';
+    
+.wrapper {
+    padding-top: 12%;
+    .image {
+        background-image: url('../../../assets/images/kerim.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0 auto;
+        opacity: 0.6;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        border: 3px solid white;
+        @include boxshadow();
+    }
+    .name {
+        width: 100%;
+        text-align: center;
+        margin: 25px auto;
+        font-size: 30px;
+        color: $lightblue;
+    }
+    .text {
+        width: 525px;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 18px;
+        text-align: center;
+        color: $darker-lightblue;
+    }
+    .buttons {
+        width: 500px;
+        margin: 40px auto;
+        text-align: center;
+        button {
+            margin: 0 auto;
+            width: 150px;
+            height: 40px;
+        }
+        .hireme {
+            float: right;
+            margin-right: 4%;
+        }
+        .feedback {
+            float: left;
+            margin-left: 4%;
+        }
+    }
+}
